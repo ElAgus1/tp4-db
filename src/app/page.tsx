@@ -1,5 +1,9 @@
-import Contador from "./contador";
+import Contador from "./components/contador";
 
 export default function Home() {
-  return <Contador />;
+  return (
+    <main>
+      <Contador />
+    </main>
+  );
 }
