@@ -4,7 +4,7 @@ import supabase from "../lib/supabase";
 // obtiene valor inicial de la db
 const fetchData = async () => {
   const { data, error } = await supabase
-    .from("Numero")
+    .from("number")
     .select("valor")
     .eq("id", 1)
     .single();
@@ -18,7 +18,7 @@ const fetchData = async () => {
 // actualiza datos en db
 const updateData = async (newValue: number) => {
   const { data, error } = await supabase
-    .from("Numero")
+    .from("number")
     .update({ valor: newValue })
     .eq("id", 1);
   if (error) {
